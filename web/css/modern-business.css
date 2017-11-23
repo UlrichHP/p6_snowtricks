@@ -1,0 +1,87 @@
+/*!
+ * Start Bootstrap - Modern Business (https://startbootstrap.com/template-overviews/modern-business)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
+ */
+
+body {
+    padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 56px;
+    }
+}
+
+.nav-item {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.carousel-item {
+    max-height: 600px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.portfolio-item {
+    margin-bottom: 30px;
+}
+
+.tricks-border {
+    border-left: 1px solid gray;
+}
+
+.tricks-img {
+    height: 200px;
+    width: 300px;
+    position: block;
+    float: left;
+    margin: 10px 10px;
+    border: 2px solid lightblue;
+}
+
+.tricks-title {
+    padding-left: 20px;
+    margin-top: 30px;
+    position: block;
+}
+
+.tricks-icons {
+	position: block;
+	padding-left: 20px;
+}
+
+.btn-comment{
+    float: right;
+}
+
+.form-btn {
+	text-align: right;
+}
+
+.form-group {
+	padding: 10px 10px;
+}
+
+.media {
+    border: 1px solid gray;
+}
+
+.avatar {
+    height: 90px;
+    margin: 20px 20px;
+	border: 1px solid gray;
+}
+
+.tricks-option {
+	float: right;
+}
+
+.footer-add {
+    margin-top: 70px;
+}

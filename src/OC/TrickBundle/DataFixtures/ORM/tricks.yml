@@ -1,0 +1,61 @@
+OC\TrickBundle\Entity\Trick:
+    mute:
+        name: Mute
+        description: Saisie de la carre frontside de la planche entre les deux pieds avec la main avant.
+        category: '@grab'
+
+    nose:
+        name: Nose grab
+        description: Saisie de la partie avant de la planche, avec la main avant.
+        category: '@grab'
+
+    indy:
+        name: Indy
+        description: Saisie de la carre frontside de la planche, entre les deux pieds, avec la main arrière.
+        category: '@grab'
+
+    stalefish:
+        name: Stalefish
+        description: Saisie de la carre backside de la planche entre les deux pieds avec la main arrière.
+        category: '@grab'
+
+    tail:
+        name: Tail grab
+        description: Saisie de la partie arrière de la planche, avec la main arrière.
+        category: '@grab'
+
+    180deg:
+        name: 180°
+        description: Saut avec une rotation d'un demi-tour. On peut également parler d'un backside.
+        category: '@rotation'
+
+    360deg:
+        name: 360°
+        description: Un saut avec une rotation d'un tour complet, souvent abrégé "trois six".
+        category: '@rotation'
+
+    540deg:
+        name: 540°
+        description: Un saut avec une rotation d\'un tour et demi, souvent abrégé "cinq quatre".
+        category: '@rotation'
+
+    720deg:
+        name: 720°
+        description: Un saut avec une rotation de deux tours complets, souvent abrégé "sept deux".
+        category: '@rotation'
+        
+    front:
+        name: Frontflip
+        description: Rotation en avant. Il est possible de faire plusieurs flips à la suite, et d'ajouter un grab à la rotation.
+        category: '@flip'
+        
+    back:
+        name: Backflip
+        description: Rotation en arrière. Il est possible de faire plusieurs flips à la suite, et d'ajouter un grab à la rotation.
+        category: '@flip'
+        
+    japan:
+        name: Japan air
+        description: Saisie de l'avant de la planche, avec la main avant, du côté de la carre frontside.
+        category: '@oldschool'
+        

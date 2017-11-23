@@ -1,0 +1,78 @@
+OC\TrickBundle\Entity\Picture:
+    pic1:
+        trick: '@mute'
+        pictureName: mute.jpg
+        pictureSize: 4609812
+        updatedAt:  <dateTime('2017-11-14 14:29:53')>
+
+    pic2:
+        trick: '@nose'
+        pictureName: nosegrab.jpg
+        pictureSize: 127266
+        updatedAt:  <dateTime('2017-11-14 14:29:53')>
+    
+    pic3:
+        trick: '@indy'
+        pictureName: indy.jpg
+        pictureSize: 171908
+        updatedAt:  <dateTime('2017-11-14 14:29:53')>
+    
+    pic4:
+        trick: '@stalefish'
+        pictureName: stalefish.jpg
+        pictureSize: 340651
+        updatedAt:  <dateTime('2017-11-14 14:29:53')>
+
+    pic5:
+        trick: '@tail'
+        pictureName: tailgrab.jpg
+        pictureSize: 66783
+        updatedAt:  <dateTime('2017-11-14 14:29:53')>
+
+    pic6:
+        trick: '@180deg'
+        pictureName: 180.jpg
+        pictureSize: 298297
+        updatedAt:  <dateTime('2017-11-14 14:29:53')>
+
+    pic7:
+        trick: '@360deg'
+        pictureName: 360.jpg
+        pictureSize: 176351
+        updatedAt:  <dateTime('2017-11-14 14:29:53')>
+
+    pic8:
+        trick: '@540deg'
+        pictureName: 540.jpg
+        pictureSize: 99791
+        updatedAt:  <dateTime('2017-11-14 14:29:53')>
+
+    pic9:
+        trick: '@720deg'
+        pictureName: 720.jpg
+        pictureSize: 106633
+        updatedAt:  <dateTime('2017-11-14 14:29:53')>
+    
+    pic10:
+        trick: '@front'
+        pictureName: 720.jpg
+        pictureSize: 54843
+        updatedAt:  <dateTime('2017-11-14 14:29:53')>
+    
+    pic11:
+        trick: '@back'
+        pictureName: 720.jpg
+        pictureSize: 60957
+        updatedAt:  <dateTime('2017-11-14 14:29:53')>
+        
+    pic12:
+        trick: '@japan'
+        pictureName: japanair.jpg
+        pictureSize: 25745
+        updatedAt:  <dateTime('2017-11-14 14:29:53')>
+        
+    pic13:
+        trick: '@japan'
+        pictureName: japanair2.jpg
+        pictureSize: 1009759
+        updatedAt:  <dateTime('2017-11-14 14:29:53')>

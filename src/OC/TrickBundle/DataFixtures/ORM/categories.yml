@@ -1,0 +1,12 @@
+OC\TrickBundle\Entity\Category:
+    grab:
+        name: Grab
+
+    rotation:
+        name: Rotation
+
+    flip:
+        name: Flip
+        
+    oldschool:
+        name: Old School

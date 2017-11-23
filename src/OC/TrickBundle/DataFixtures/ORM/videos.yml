@@ -1,0 +1,17 @@
+OC\TrickBundle\Entity\Video:
+    v_1:
+        link: https://www.youtube.com/embed/yyN1gQqsMwM
+        trick: '@mute'
+
+    v_2:
+        link: https://www.youtube.com/embed/M5NTCfdObfs
+        trick: '@mute'
+
+    v_3:
+        link: https://www.youtube.com/embed/w66AU3GdfFo
+        trick: '@540deg'
+
+    v_4:
+        link: https://www.youtube.com/embed/l18w36iI9LU
+        trick: '@720deg'
+        

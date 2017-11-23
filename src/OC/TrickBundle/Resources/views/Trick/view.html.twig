@@ -1,0 +1,126 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}{{ trick.name }} - {{ parent() }}{% endblock %}
+
+{% block body %}
+
+{# navbar #}
+{% include 'OCTrickBundle::navbar.html.twig' %}
+
+<div class="container">
+
+    {# Page Heading #}
+    <h1 class="mt-4 mb-3">{{ trick.name }}</h1>
+    <div class="tricks-option">
+        <a href="{{ path('oc_trick_edit', {'slug': trick.slug }) }}" title="Modifier"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+        <a href="{{ path('oc_trick_delete', {'id': trick.id }) }}" title="Supprimer"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+    </div>
+    <h5>Catégorie : {{ trick.category.name }}</h5>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    {% for picture in trick.pictures %}
+                        {% if loop.first %}
+                            <img class="carousel-item active" 
+                        {% else %}
+                            <img class="carousel-item" 
+                        {% endif %}
+                            src="{{ asset('img/tricks/' ~ picture.pictureName ~ '') }}">
+                    {% endfor %}
+                </div>
+                <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Précédent</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Suivant</span>
+                </a>
+            </div>
+
+            <hr>
+
+            {# Post Content #}
+            <p><strong>Description :</strong> {{ trick.description|nl2br }}</p>
+
+            <hr>
+            
+            <div class="row">
+                {% for video in trick.videos %}
+                    <div class="col-lg-4 col-md-6 col-sm-12" style="text-align:center">
+                        <iframe width="280" height="160" src="{{ video.link }}" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                {% endfor %}
+            </div>
+            
+            <hr>
+
+            <h3 style="text-decoration:underline">Commentaires</h3>          
+
+            {# Comments Form #}
+            <div class="card my-4">
+                <h5 class="card-header">Ecrivez un commentaire :</h5>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+
+            {# Comments #}
+            <div class="media mb-4">
+                <img class="d-flex mr-3 avatar" src="{{ asset('snowboarder.png') }}" alt="">
+                <div class="media-body">
+                    <p style="margin-top:20px">
+                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                    </p>
+                    <p>Posté par JTest, le 10/11/2017 à 15h50.</p>
+                </div>
+            </div>
+            <div class="media mb-4">
+                <img class="d-flex mr-3 avatar" src="{{ asset('snowboarder.png') }}" alt="">
+                <div class="media-body">
+                    <p style="margin-top:20px">
+                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                    </p>
+                    <p>Posté par Test2, le 12/11/2017 à 16h50.</p>
+                </div>
+            </div>
+            
+            {# Pagination #}
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">Précédent</span>
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">3</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">Suivant</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

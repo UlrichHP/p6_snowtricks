@@ -1,0 +1,6 @@
+oc_trick:
+    resource: "@OCTrickBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+
