@@ -1,0 +1,25 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Supprimer {{ trick.name }} - {{ parent() }}{% endblock %}
+
+{% block body %}
+
+	{# navbar #}
+	{% include 'OCTrickBundle::navbar.html.twig' %}
+
+	<div class="container">
+		<h1 class="my-4" style="text-decoration:underline">Supprimer une Figure</h1>
+		
+		<div class="row">
+			<div class="col-md-12 mx-auto" style="text-align:center">
+				<h4 style="margin-top:60px">Voulez-vous vraiment supprimer la Figure : {{ trick.name }} ?</h4>
+				<form class="col-10 mx-auto" action="{{ path('oc_trick_delete', {'id': trick.id}) }}" method="post" style="margin-top:60px;margin-bottom:500px">
+					<a class="btn btn-primary" href="{{ path('oc_trick_view', {'slug': trick.slug}) }}" style="margin-right:20px">Annuler</a>
+					<input type="submit" value="Supprimer" class="btn btn-danger" />
+					{{ form_rest(form) }}
+				</form>
+			</div>
+		</div>
+	</div>
+	
+{% endblock %}

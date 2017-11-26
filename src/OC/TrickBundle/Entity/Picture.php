@@ -26,7 +26,7 @@ class Picture
     private $id;
 
     /**
-     * @Vich\UploadableField(mapping="trick_picture", fileNameProperty="pictureName", size="pictureSize")
+     * @Vich\UploadableField(mapping="oc_trick_picture", fileNameProperty="pictureName", size="pictureSize")
      * 
      * @var File
      */

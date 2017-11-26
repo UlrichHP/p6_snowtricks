@@ -33,7 +33,8 @@ body {
 }
 
 .tricks-border {
-    border-left: 1px solid gray;
+    border-left: 1px solid lightblue;
+    margin: 5px 0px;
 }
 
 .tricks-img {

@@ -1,19 +1,29 @@
 oc_trick_homepage:
-    path:     /
-    defaults: { _controller: OCTrickBundle:Trick:index }
+    path:     /{page}
+    defaults: 
+        _controller: OCTrickBundle:Trick:index
+        page: 1
+    requirements:
+        page: \d+
     
 oc_trick_view:
     path:     /trick/{slug}
-    defaults: { _controller: OCTrickBundle:Trick:view }
+    defaults: 
+        _controller: OCTrickBundle:Trick:view
     
 oc_trick_add:
     path:     /add
-    defaults: { _controller: OCTrickBundle:Trick:add }
+    defaults: 
+        _controller: OCTrickBundle:Trick:add
     
 oc_trick_edit:
     path:     /edit/{slug}
-    defaults: { _controller: OCTrickBundle:Trick:edit }
+    defaults: 
+        _controller: OCTrickBundle:Trick:edit
     
 oc_trick_delete:
     path:     /delete/{id}
-    defaults: { _controller: OCTrickBundle:Trick:delete }
+    defaults: 
+        _controller: OCTrickBundle:Trick:delete
+    requirements:
+        id: \d+

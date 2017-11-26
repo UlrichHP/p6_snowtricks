@@ -11,7 +11,7 @@ parameters:
 
 framework:
     #esi: ~
-    #translator: { fallbacks: ['%locale%'] }
+    translator: { fallbacks: ['%locale%'] }
     secret: '%secret%'
     router:
         resource: '%kernel.project_dir%/app/config/routing.yml'
@@ -79,7 +79,7 @@ vich_uploader:
     db_driver: orm
 
     mappings:
-        trick_picture:
+        oc_trick_picture:
             uri_prefix:         /img/tricks
             upload_destination: '%kernel.root_dir%/../web/img/tricks'
             namer:              vich_uploader.namer_uniqid

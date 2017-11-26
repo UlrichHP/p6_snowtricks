@@ -69,7 +69,7 @@ class Trick
 
     public function __construct()
     {
-        $this->Pictures = new ArrayCollection();
+        $this->pictures = new ArrayCollection();
         $this->videos = new ArrayCollection();
     }
 

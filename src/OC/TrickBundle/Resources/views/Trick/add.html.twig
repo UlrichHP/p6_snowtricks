@@ -1,0 +1,14 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Ajouter une Figure - {{ parent() }}{% endblock %}
+
+{% form_theme form 'OCTrickBundle:form:fields.html.twig' %}
+
+{% block body %}
+
+    {# navbar #}
+    {% include 'OCTrickBundle::navbar.html.twig' %}
+
+    {% include 'OCTrickBundle:form:trickForm.html.twig' %}
+
+{% endblock %}

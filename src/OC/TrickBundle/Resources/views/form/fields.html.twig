@@ -1,0 +1,42 @@
+{% block _oc_trickbundle_trick_pictures_entry_row %}
+	
+	<div class="form-group rowPic">
+		<div class="col-xs-12">
+			{% if form.pictureFile.parent.vars.value is not null %}
+				<div style="display:none;">
+					{{ form_widget(form.pictureFile) }}
+				</div>
+				<img src="{{ asset('img/tricks/' ~ form.pictureFile.parent.vars.value.pictureName) }}" class="img-responsive center-block imgPreview" style="height:400px;width:600px">
+			{% else %}
+			{{ form_widget(form.pictureFile) }}
+			{% endif %}
+		</div>
+		<div class="col-xs-12">
+			{{ form_errors(form.pictureFile) }}
+		</div>
+	</div>
+
+{% endblock %}
+
+
+{% block _oc_trickbundle_trick_videos_entry_row %}
+
+	<div class="form-group rowVideo">
+		<div class="col-xs-12">
+			{% if form.link.vars.value != '' %}
+			<div style="display:none;">
+				{{ form_widget(form.link, {'attr': {'class': 'form-control'}}) }}
+			</div>
+			<div class="embed-responsive embed-responsive-16by9" style="text-align:center">
+				<iframe class="embed-responsive-item" src="{{ form.link.vars.value }}" frameborder="0" allowfullscreen></iframe>
+			</div>
+			{% else %}
+				{{ form_widget(form.link, {'attr': {'class': 'form-control'}}) }}
+			{% endif %}
+		</div>
+		<div class="col-xs-12">
+			{{ form_errors(form.link) }}
+		</div>
+	</div>
+
+{% endblock %}
