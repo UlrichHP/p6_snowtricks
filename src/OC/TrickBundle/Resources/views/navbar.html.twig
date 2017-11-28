@@ -9,18 +9,24 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path('oc_trick_homepage') }}">Accueil</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path('oc_trick_add') }}">Ajouter</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Profil</a>
-                </li>
-                <li class="nav-item">
-                        <a class="nav-link" href="#">Déconnexion</a>
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('oc_trick_add') }}">Ajouter</a>
                     </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Connexion</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('fos_user_profile_edit') }}">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('fos_user_security_login') }}">Connexion</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="{{ path('fos_user_registration_register') }}">Inscription</a>
+                    </li>
+                {% endif %}
             </ul>
         </div>
     </div>

@@ -30,17 +30,6 @@ class Category
     private $name;
 
     /**
-     * @ORM\OneToMany(targetEntity="OC\TrickBundle\Entity\Trick", mappedBy="category", cascade={"persist", "remove"})
-     */
-    private $tricks;
-
-
-    public function __construct()
-    {
-        $this->tricks = new ArrayCollection();
-    }
-
-    /**
      * Get id
      *
      * @return int
@@ -74,37 +63,4 @@ class Category
         return $this->name;
     }
 
-    /**
-     * Add trick
-     *
-     * @param \OC\TrickBundle\Entity\Trick $trick
-     *
-     * @return Category
-     */
-    public function addTrick(\OC\TrickBundle\Entity\Trick $trick)
-    {
-        $this->tricks[] = $trick;
-
-        return $this;
-    }
-
-    /**
-     * Remove trick
-     *
-     * @param \OC\TrickBundle\Entity\Trick $trick
-     */
-    public function removeTrick(\OC\TrickBundle\Entity\Trick $trick)
-    {
-        $this->tricks->removeElement($trick);
-    }
-
-    /**
-     * Get tricks
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getTricks()
-    {
-        return $this->tricks;
-    }
 }

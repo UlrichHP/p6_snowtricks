@@ -19,12 +19,16 @@
             {% endfor %}
         {% endfor %}
         
-        {# Page Heading #}
+        {# Page Content #}
         <h1 class="mt-4 mb-3">{{ trick.name }}</h1>
-        <div class="tricks-option">
-            <a href="{{ path('oc_trick_edit', {'slug': trick.slug }) }}" title="Modifier"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
-            <a href="{{ path('oc_trick_delete', {'id': trick.id }) }}" title="Supprimer"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
-        </div>
+        
+        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+            <div class="tricks-option">
+                <a href="{{ path('oc_trick_edit', {'slug': trick.slug }) }}" title="Modifier"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="{{ path('oc_trick_delete', {'id': trick.id }) }}" title="Supprimer"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </div>
+        {% endif %}
+        
         <h5>Catégorie : {{ trick.category.name }}</h5>
 
         <div class="row">
@@ -112,12 +116,6 @@
                 {# Pagination #}
                 <ul class="pagination justify-content-center">
                     <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                            <span class="sr-only">Précédent</span>
-                        </a>
-                    </li>
-                    <li class="page-item">
                         <a class="page-link" href="#">1</a>
                     </li>
                     <li class="page-item">
@@ -125,12 +123,6 @@
                     </li>
                     <li class="page-item">
                         <a class="page-link" href="#">3</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                            <span class="sr-only">Suivant</span>
-                        </a>
                     </li>
                 </ul>
             </div>

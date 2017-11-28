@@ -18,7 +18,8 @@ class AppKernel extends Kernel
             new OC\TrickBundle\OCTrickBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new Vich\UploaderBundle\VichUploaderBundle(),
-            new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
+            new OC\UserBundle\OCUserBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

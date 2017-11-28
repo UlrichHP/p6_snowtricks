@@ -52,7 +52,7 @@ class Trick
     private $slug;
 
     /**
-     * @ORM\ManyToOne(targetEntity="OC\TrickBundle\Entity\Category", inversedBy="tricks")
+     * @ORM\ManyToOne(targetEntity="OC\TrickBundle\Entity\Category")
      * @ORM\JoinColumn(nullable=false)
      */
     private $category;

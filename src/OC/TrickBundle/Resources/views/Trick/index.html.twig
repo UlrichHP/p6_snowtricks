@@ -45,10 +45,12 @@
                 <div class="col-lg-6 col-md-6 col-sm-12 tricks-border">
                     <a href="{{ path('oc_trick_view', { 'slug': trick.slug }) }}"><img class="tricks-img" src="{{ asset('img/tricks/' ~ trick.pictures[0].pictureName ~ '') }}"></a>
                     <h3 class="tricks-title"><a href="{{ path('oc_trick_view', { 'slug': trick.slug }) }}">{{ trick.name|title }}</a></h3>
-                    <div class="tricks-icons">
-                        <a href="{{ path('oc_trick_edit', {'slug': trick.slug }) }}" title="Modifier"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
-                        <a href="{{ path('oc_trick_delete', {'id': trick.id }) }}" title="Supprimer"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
-                    </div>
+                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                        <div class="tricks-icons">
+                            <a href="{{ path('oc_trick_edit', {'slug': trick.slug }) }}" title="Modifier"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                            <a href="{{ path('oc_trick_delete', {'id': trick.id }) }}" title="Supprimer"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+                        </div>
+                    {% endif %}
                 </div>
             {% endfor %}
         </div>
