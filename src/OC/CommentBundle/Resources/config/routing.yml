@@ -1,0 +1,11 @@
+oc_comment_view:
+    path:               /comments/{trick}/{page}
+    defaults:
+        _controller:    OCCommentBundle:Comment:view
+    options:
+        expose:         true
+
+oc_comment_add:
+    path:               /add_comment/{trick_id}/{user_id}
+    defaults:
+        _controller:    OCCommentBundle:Comment:add

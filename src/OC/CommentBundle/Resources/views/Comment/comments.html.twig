@@ -1,0 +1,25 @@
+{# Comments #}
+{% if comments == false %}
+    <p>Pas de commentaires pour l'instant !</p>
+{% endif %}
+
+{% for comment in comments %}
+    <div class="media mb-4 commentBlock">
+        <img class="d-flex mr-3 avatar" src="{{ comment.author.gravUrl ~ '&s=80' }}" alt="{{ comment.author.username }}">
+        <div class="media-body">
+            <p style="margin-top:20px">
+                {{ comment.content|nl2br }}
+            </p>
+            <p><em>Posté par {{ comment.author.username }}, le {{ comment.date|date("d-m-Y à H:i:s") }}.</em></p>
+        </div>
+    </div>
+{% endfor %}
+
+{# Pagination #}
+<ul class="pagination justify-content-center">
+    {% for p in range(1, totalPages) %}
+        <li class="page-item{% if p == actualPage %} active{% endif %}">
+            <a class="page-link pageBtn" href="#" data-trick="{{ trick_id }}" data-page="{{ p }}">{{ p }}</a>
+        </li>
+    {% endfor %}
+</ul>

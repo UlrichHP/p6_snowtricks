@@ -106,4 +106,18 @@ $(function() {
         });
     }
 
+    $(document).on('click', '.pageBtn', function(e) {
+        e.preventDefault();
+        var trick = $(this).data('trick');
+        var page = $(this).data('page');
+        var url = Routing.generate('oc_comment_view', {'trick': trick, 'page': page} );
+
+        $.ajax({
+            url: url,
+            success: function(response) {
+                $('#comments').html(response);
+            }
+        });
+    });
+
 });

@@ -5,20 +5,20 @@
     {# navbar #}
     {% include 'OCTrickBundle::navbar.html.twig' %}
 
-	<div class="container">
-		{# On affiche les messages flash que définissent les contrôleurs du bundle #}
-		{% for key, messages in app.session.flashbag.all() %}
-			{% for message in messages %}
-				<div class="alert alert-dismissable alert-{{ key }}">
-					<a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-					{{ message|trans({}, 'FOSUserBundle') }}
-				</div>
-			{% endfor %}
-		{% endfor %}
-		
-		{# On définit ce block, dans lequel vont venir s'insérer les autres vues du bundle #}
-		{% block fos_user_content %}
-		{% endblock fos_user_content %}
-	</div>
+    <div class="container">
+        {# On affiche les messages flash que définissent les contrôleurs du bundle #}
+        {% for key, messages in app.session.flashbag.all() %}
+            {% for message in messages %}
+                <div class="alert alert-dismissable alert-{{ key }}">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                    {{ message|trans({}, 'FOSUserBundle') }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+        
+        {# On définit ce block, dans lequel vont venir s'insérer les autres vues du bundle #}
+        {% block fos_user_content %}
+        {% endblock fos_user_content %}
+    </div>
 
 {% endblock %}
