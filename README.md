@@ -1,5 +1,7 @@
 # Projet 6 - Site communautaire SnowTricks / Project 6 - SnowTricks website
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/f71bd33c-19bd-43f9-9cb2-e1e4ac5de522/mini.png)](https://insight.sensiolabs.com/projects/f71bd33c-19bd-43f9-9cb2-e1e4ac5de522)
+
 Ce site a été réalisé pour le projet 6 du parcours Développeur d'application - PHP / Symfony d'OpenClassrooms.
 J'ai utilisé comme base le thème Modern Business de StartBoostrap et Symfony Standard Edition.
 
