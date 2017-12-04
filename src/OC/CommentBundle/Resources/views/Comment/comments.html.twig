@@ -10,7 +10,7 @@
             <p style="margin-top:20px">
                 {{ comment.content|nl2br }}
             </p>
-            <p><em>Posté par {{ comment.author.username }}, le {{ comment.date|date("d-m-Y à H:i:s") }}.</em></p>
+            <p><em>Posté par {{ comment.author.username }}, le {{ comment.date|date("d/m/Y à H:i:s") }}.</em></p>
         </div>
     </div>
 {% endfor %}

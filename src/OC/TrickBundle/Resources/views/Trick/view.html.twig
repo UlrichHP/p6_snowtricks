@@ -12,7 +12,7 @@
         {# flash messages #}
         {% for label, messages in app.flashes %}
             {% for message in messages %}
-                <div class="alert alert-dismissable alert-{{ label }}">
+                <div class="alert alert-dismissable alert-{{ label }}" style="margin-top:20px">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
                     {{ message }}
                 </div>
@@ -35,6 +35,9 @@
             <div class="col-lg-12">
                 <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
+                        {% if trick.pictures is empty %}
+                            <img class="carousel-item active" src="{{ asset('img/defaultpic.jpg') }}">
+                        {% endif %}
                         {% for picture in trick.pictures %}
                             {% if loop.first %}
                                 <img class="carousel-item active" 

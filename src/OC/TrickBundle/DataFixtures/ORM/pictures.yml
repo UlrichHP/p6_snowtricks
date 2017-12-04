@@ -55,13 +55,13 @@ OC\TrickBundle\Entity\Picture:
     
     pic10:
         trick: '@front'
-        pictureName: 720.jpg
+        pictureName: frontflip.jpg
         pictureSize: 54843
         updatedAt:  <dateTime('2017-11-14 14:29:53')>
     
     pic11:
         trick: '@back'
-        pictureName: 720.jpg
+        pictureName: backflip.jpg
         pictureSize: 60957
         updatedAt:  <dateTime('2017-11-14 14:29:53')>
         

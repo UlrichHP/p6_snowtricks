@@ -36,7 +36,7 @@ class Comment
     private $date;
 
     /**
-     * @ORM\ManyToOne(targetEntity="OC\TrickBundle\Entity\Trick")
+     * @ORM\ManyToOne(targetEntity="OC\TrickBundle\Entity\Trick", cascade={"remove"})
      * @ORM\JoinColumn(nullable=false)   
      */
     private $trick;
