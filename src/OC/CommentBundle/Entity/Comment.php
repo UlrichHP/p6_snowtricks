@@ -36,8 +36,8 @@ class Comment
     private $date;
 
     /**
-     * @ORM\ManyToOne(targetEntity="OC\TrickBundle\Entity\Trick", cascade={"remove"})
-     * @ORM\JoinColumn(nullable=false)   
+     * @ORM\ManyToOne(targetEntity="OC\TrickBundle\Entity\Trick", inversedBy="comments", cascade={"persist", "remove"})
+     * @ORM\JoinColumn(nullable=false)
      */
     private $trick;
 

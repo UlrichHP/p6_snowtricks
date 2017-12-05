@@ -9,7 +9,7 @@
         {# On affiche les messages flash que définissent les contrôleurs du bundle #}
         {% for key, messages in app.session.flashbag.all() %}
             {% for message in messages %}
-                <div class="alert alert-dismissable alert-{{ key }}">
+                <div class="alert alert-dismissable alert-{{ key }}" style="margin-top:20px">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
                     {{ message|trans({}, 'FOSUserBundle') }}
                 </div>
