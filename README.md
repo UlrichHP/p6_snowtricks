@@ -5,7 +5,7 @@
 Ce site a été réalisé pour le projet 6 du parcours Développeur d'application - PHP / Symfony d'OpenClassrooms.
 J'ai utilisé comme base le thème Modern Business de StartBoostrap et Symfony Standard Edition.
 
-Tous les éléments préparatoires de ce projet (diagrammes, wireframes et maquette) sont dans le dossiers docs.
+Tous les éléments préparatoires de ce projet (diagrammes, wireframes et maquette) sont dans le dossier docs.
 
 This website has been made for the sixth project of OpenClassrooms path Application Developer - PHP / Symfony.
 I used and modified the theme Modern Business by StartBoostrap and Symfony Standard Edition.
